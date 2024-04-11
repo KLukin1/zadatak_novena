@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Zadatak_Novena</title>
+
+    <link rel="stylesheet" href="lib\uikit-3.19.4\css\uikit.min.css" />
+    <script src="lib\uikit-3.19.4\js\uikit.min.js"></script>
+    <script src="lib\uikit-3.19.4\js\uikit-icons.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <div class="top-logo">
+            <img src="img\Logo_nas_rucno_crtani.png" />
+        </div>
+        <div class="top-center">
+            <div class="top-bar">
+                <form class="uk-search uk-search-default">
+                    <span uk-search-icon></span>
+                    <input class="uk-search-input" type="search" placeholder="Search" aria-label="Search">
+                </form>
+                <div class="languages">
+                    <span>Hr</span>
+                    <span>En</span>
+                </div>
+                <div class="top-icons">
+                    <img src="img\facebook.svg" />
+                    <img src="img\instagram.svg" />
+                    <img src="img\youtube.svg" />
+                </div>
+                <div class="knezeva-palaca">
+                    <img src="img\kneževa_palača_logo.png" />
+                    <span>Kneževa palača</span>
+                </div>
+            </div>
+            <nav class="uk-navbar-container" uk-navbar>
+                <div class="uk-navbar-left">
+
+                    <ul class="uk-navbar-nav">
+                        <li class="uk-active">
+                            <a href="#">O muzeju <span uk-icon="chevron-down"></span></a><div class="uk-navbar-dropdown">
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li class="uk-active"><a href="#">Active</a></li>
+                                    <li><a href="#">Item</a></li>
+                                    <li><a href="#">Item</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">Sastavne jedinice</a></li>
+                        <li><a href="#">Događanja</a></li>
+                        <li><a href="#">Izložbe</a></li>
+                        <li><a href="#">Edukacija</a></li>
+                        <li><a href="#">Izdavaštvo</a></li>
+                        <li>
+                            <a href="#">Zbirke <span uk-icon="chevron-down"></span></a><div class="uk-navbar-dropdown">
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li class="uk-active"><a href="#">Active</a></li>
+                                    <li><a href="#">Item</a></li>
+                                    <li><a href="#">Item</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <footer>
+        <div class="footer-div uk-child-width-expand" uk-grid>
+            <div class="uk-width-1-2" uk-grid>
+                <div class="uk-width-1-2 foot-contact">
+                    <img src="img\Logo_nas_rucno_crtani.png" />
+                    <span>
+                        Narodni muzej Zadar
+                        Poljana pape Aleksandra III b.b.,
+                        23000 Zadar
+                        Tel: 023/251-851
+                        FAx: 023/251-044
+                        info@nmz.hr
+                    </span>
+                    <span class="copyright copyright-right">Copyright (c) NMZ 2018.</span>
+                </div>
+                <div class="uk-width-1-2 foot-links">
+                    <a>Najam prostora</a>
+                    <a>Press</a>
+                    <a>Multimedia</a>
+                    <span class="copyright copyright-left">Pravne napomene/Impressium</span>
+                </div>
+            </div>
+            <div class="uk-width-1-2" uk-grid>
+                <div class="uk-width-5-6 foot-newsletter">
+                    <form>
+                        <span>Prijavi se na newsletter</span>
+                        <input type="email" />
+                        <label><input class="uk-checkbox" type="checkbox"> Pročitao sam i prihvaćam <a href="#">Opće uvjete korištenja i izjavu o povjerljivosti podataka</a></label>
+                        <button class="uk-button uk-button-default">Pošalji</button>
+                    </form>
+                    <span class="copyright copyright-right">Izrada NOVENA</span>
+                </div>
+                <div class="uk-width-1-6 foot-icons">
+                    <img src="img\facebook.svg" />
+                    <img src="img\instagram.svg" />
+                    <img src="img\youtube.svg" />
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,197 @@
+
+@white: #fff;
+@light-background: #F6F4F0;
+@gold: #A38B5B;
+@gray: #82807E;
+@font-dark: #3C3835;
+@font-medium: #82807E;
+
+// uikit overrides
+.uk-button-default {
+    background-color: @gold;
+    color: @white;
+}
+
+.uk-grid + .uk-grid {
+    margin-top: 0;
+}
+
+body {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: Open Sans;
+
+    header {
+        background-color: @white;
+        border-right: 1px solid @gold;
+        border-left: 1px solid @gold;
+        border-bottom: 1px solid @gold;
+        width: 100%;
+        max-width: 1420px;
+        height: 133px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+
+        .top-logo {
+            width: 206px;
+            height: 79px;
+            position: relative;
+            border-right: 1px solid #E8E0CC;
+
+            img {
+                position: absolute;
+                margin: auto;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+        }
+
+        .divider-big {
+            height: 79px;
+        }
+
+        .divider-small {
+            height: 43px;
+        }
+
+        .top-center {
+            width: 100%;
+
+            .top-bar {
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+
+                .uk-search {
+
+                    span {
+                        color: @font-dark;
+                    }
+
+                    .uk-search-input {
+                        border: none;
+                        color: @font-dark; //ne radi
+                    }
+                }
+
+                .languages span {
+
+                    &:first-child {
+                        color: @gold;
+                    }
+
+                    &:last-child {
+                        color: @gray;
+                    }
+                }
+
+                .knezeva-palaca {
+                    color: @gold;
+                    width: 199px;
+                    height: 43px;
+                    border: 1px solid @gold;
+
+                    img {
+                        width: 41px;
+                        height: 41px;
+                        height: 41px;
+                    }
+
+                    span {
+                        line-height: 43px;
+                        vertical-align: middle;
+                    }
+                }
+            }
+
+            nav {
+
+                .uk-navbar-nav li a {
+                    color: @font-dark;
+                    text-transform: none;
+                    font-size: 16px;
+
+                    span {
+                        color: @gold;
+                    }
+                }
+            }
+        }
+    }
+
+    .main-top {
+
+        .main-icons {
+            background-color: @light-background;
+        }
+    }
+
+    .main-aktualnosti {
+        height: 655px;
+        background-color: @light-background;
+
+        .aktualnosti {
+            width: 100%;
+            max-width: 1420px;
+            margin: 0 auto;
+        }
+    }
+
+    footer {
+        height: 369px;
+        border-top: 1px solid @gold;
+        margin-top: 84px;
+        background: linear-gradient(to bottom, @white 326px, @font-dark 43px);
+
+        .footer-div {
+            width: 100%;
+            max-width: 1420px;
+            margin: 0 auto;
+            color: #000;
+            font-weight: 400;
+            font-size: 14px;
+
+            .foot-contact, .foot-links, .foot-newsletter, .foot-icons {
+                position: relative;
+                height: 369px;
+                padding-top: 44px;
+            }
+
+            .foot-links {
+                font-weight: 600;
+                font-size: 16px;
+            }
+
+            .foot-newsletter {
+                label {
+                    font-size: 12px;
+
+                    a {
+                        color: #000;
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .copyright {
+                color: @white;
+                font-size: 14px;
+                font-weight: 400;
+                display: inline-block;
+                position: absolute;
+                bottom: 12px;
+            }
+
+            .copyright-right {
+                right: 0;
+            }
+
+            .copyright-left {
+                left: 40px;
+            }
+        }
+    }
+}
