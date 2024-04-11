@@ -5,6 +5,7 @@
 @gray: #82807E;
 @font-dark: #3C3835;
 @font-medium: #82807E;
+@dark-indigo: #425863;
 
 // uikit overrides
 .uk-button-default {
@@ -14,6 +15,10 @@
 
 .uk-grid + .uk-grid {
     margin-top: 0;
+}
+
+.uk-button {
+    text-transform: none;
 }
 
 body {
@@ -138,33 +143,93 @@ body {
             max-width: 1420px;
             margin: 0 auto;
 
+            .aktualnosti-top {
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+
+                h2, a {
+                    color: @dark-indigo;
+                    font-size: 24px;
+                    font-weight: 700;
+                    display: inline-block;
+                }
+
+                a span {
+                    color: @font-dark;
+                }
+            }
+
             .aktualnosti-card {
+                background-color: @white;
+                padding: 9px;
+                position: relative;
 
                 .card-img {
+                    width: 322px;
+                    height: 234px;
+                    overflow: hidden;
 
                     img {
-                        max-width: 322px;
-                        max-height: 234px;
+                        height: 234px;
+                        object-fit: cover;
+                        width: 100%;
                     }
+                }
 
-                    span {
-                        display: inline-block;
-                        position: relative;
-                        bottom: 15px;
+                .date-banner {
+                    display: flex;
+                    height: 34px;
+                    position: relative;
+                    bottom: 18px;
+
+                    .date-text {
                         background-color: @gold;
                         color: @white;
-                        width: 264px;
-                        clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+                        font-size: 16px;
+                        font-weight: 700;
+                        line-height: 34px;
+                        text-align: left;
+                        padding-left: 10px;
+                        width: 229px;
+                        clip-path: polygon(0 0, 100% 0, 93% 100%, 0% 100%);
                     }
 
-                    span.color-span {
-                        display: inline-block;
-                        position: relative;
-                        bottom: 15px;
+                    div.color-div {
                         background-color: red;
-                        height: 24px;
                         width: 30px;
-                        clip-path: polygon(36% 0, 100% 0, 100% 100%, 0% 100%);
+                        margin-left: -10px;
+                        clip-path: polygon(51% 0, 100% 0, 100% 100%, 0% 100%);
+
+                        &:nth-child(1) {
+                            background-color: #94524A;
+                        }
+
+                        &:nth-child(2) {
+                            background-color: #6F9283;
+                        }
+
+                        &:nth-child(3) {
+                            background-color: #74526C;
+                        }
+
+                        &:nth-child(4) {
+                            background-color: #DBA04D;
+                        }
+                    }
+                }
+
+                button {
+                    background-color: @white;
+                    border: 1px solid @gold;
+                    color: @gold;
+                    font-size: 14px;
+                    transition: all 0.3s linear;
+
+                    &:hover {
+                        background-color: @gold;
+                        color: @white;
+                        transition: all 0.3s linear;
                     }
                 }
             }

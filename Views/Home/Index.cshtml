@@ -1,5 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    List<AktualnostModel> Aktualnosti = ViewBag.Aktualnosti;
 }
 
 
@@ -21,51 +22,29 @@
 </div>
 <div class="main-aktualnosti">
     <div class="aktualnosti">
-
-        <h2>Aktualnosti</h2>
-        <span>Vidi više <span uk-icon="chevron-right"></span></span>
-        <div class="uk-child-width-expand@s uk-text-center" uk-grid>
-            <div class="uk-width-1-4 aktualnosti-card">
-                <div class="card-img">
-                    <img src="img/Izbor_iz_zbirki_Galerije_umjetnina.jpg" />
-                    <span>12.1.2018. - 12.2.2018.</span>
-                    <span class="color-span"></span>
+        <div class="aktualnosti-top">
+            <h2>Aktualnosti</h2>
+            <a>Vidi više <span uk-icon="chevron-right"></span></a>
+        </div>
+        <div class="uk-child-width-expand@s uk-text-center uk-grid-medium" uk-grid>
+            @foreach (var aktualnost in Aktualnosti)
+            {
+                <div class="uk-width-1-4">
+                    <div class="aktualnosti-card">
+                        <div class="card-img">
+                            <img src="@aktualnost.ImageUrl" />
+                        </div>
+                        <div class="date-banner">
+                            <div class="date-text">@aktualnost.DateRange</div>
+                            <div class="color-div"></div>
+                        </div>
+                        <span>@aktualnost.Category</span>
+                        <h3>@aktualnost.Title</h3>
+                        <h4>@aktualnost.Location</h4>
+                        <button class="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom">Vidi više</button>
+                    </div>
                 </div>
-                <span>IZLOŽBE</span>
-                <h3>Izložba Ivana Mažuranića - Kiparske inspiracije</h3>
-                <h4>Galerija umjetnina</h4>
-                <button>Vidi više</button>
-            </div>
-            <div class="uk-width-1-4 aktualnosti-card">
-                <div class="card-img">
-                    <img src="img/foto_Billy_Name_1529323525.jpg" />
-                    <span>22.6.2018.</span>
-                </div>
-                <span>PREDAVANJA</span>
-                <h3>Andy Warhol: The King of Pop Art</h3>
-                <h4>Kneževa palača</h4>
-                <button>Vidi više</button>
-            </div>
-            <div class="uk-width-1-4 aktualnosti-card">
-                <div class="card-img">
-                    <img src="img/thumb_760_0x600_0_0_auto.jpg" />
-                    <span>12.1.2018. - 12.2.2018.</span>
-                </div>
-                <span>KONCERTI</span>
-                <h3>Razigrane žice</h3>
-                <h4>Kneževa palača</h4>
-                <button>Vidi više</button>
-            </div>
-            <div class="uk-width-1-4 aktualnosti-card">
-                <div class="card-img">
-                    <img src="img/oglas_15_minutes_1527238997.jpg" />
-                    <span>25.6.2018.</span>
-                </div>
-                <span>OSTALO</span>
-                <h3>Natječaj: 15 minutes of fame</h3>
-                <h4>Kneževa palača</h4>
-                <button>Vidi više</button>
-            </div>
+            }
         </div>
     </div>
 </div>

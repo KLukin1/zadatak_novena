@@ -5,6 +5,9 @@
 .uk-grid + .uk-grid {
   margin-top: 0;
 }
+.uk-button {
+  text-transform: none;
+}
 body {
   font-size: 16px;
   font-weight: 600;
@@ -97,27 +100,82 @@ body .main-aktualnosti .aktualnosti {
   max-width: 1420px;
   margin: 0 auto;
 }
-body .main-aktualnosti .aktualnosti .aktualnosti-card .card-img img {
-  max-width: 322px;
-  max-height: 234px;
+body .main-aktualnosti .aktualnosti .aktualnosti-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
-body .main-aktualnosti .aktualnosti .aktualnosti-card .card-img span {
+body .main-aktualnosti .aktualnosti .aktualnosti-top h2,
+body .main-aktualnosti .aktualnosti .aktualnosti-top a {
+  color: #425863;
+  font-size: 24px;
+  font-weight: 700;
   display: inline-block;
+}
+body .main-aktualnosti .aktualnosti .aktualnosti-top a span {
+  color: #3C3835;
+}
+body .main-aktualnosti .aktualnosti .aktualnosti-card {
+  background-color: #fff;
+  padding: 9px;
   position: relative;
-  bottom: 15px;
+}
+body .main-aktualnosti .aktualnosti .aktualnosti-card .card-img {
+  width: 322px;
+  height: 234px;
+  overflow: hidden;
+}
+body .main-aktualnosti .aktualnosti .aktualnosti-card .card-img img {
+  height: 234px;
+  object-fit: cover;
+  width: 100%;
+}
+body .main-aktualnosti .aktualnosti .aktualnosti-card .date-banner {
+  display: flex;
+  height: 34px;
+  position: relative;
+  bottom: 18px;
+}
+body .main-aktualnosti .aktualnosti .aktualnosti-card .date-banner .date-text {
   background-color: #A38B5B;
   color: #fff;
-  width: 264px;
-  clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 34px;
+  text-align: left;
+  padding-left: 10px;
+  width: 229px;
+  clip-path: polygon(0 0, 100% 0, 93% 100%, 0% 100%);
 }
-body .main-aktualnosti .aktualnosti .aktualnosti-card .card-img span.color-span {
-  display: inline-block;
-  position: relative;
-  bottom: 15px;
+body .main-aktualnosti .aktualnosti .aktualnosti-card .date-banner div.color-div {
   background-color: red;
-  height: 24px;
   width: 30px;
-  clip-path: polygon(36% 0, 100% 0, 100% 100%, 0% 100%);
+  margin-left: -10px;
+  clip-path: polygon(51% 0, 100% 0, 100% 100%, 0% 100%);
+}
+body .main-aktualnosti .aktualnosti .aktualnosti-card .date-banner div.color-div:nth-child(1) {
+  background-color: #94524A;
+}
+body .main-aktualnosti .aktualnosti .aktualnosti-card .date-banner div.color-div:nth-child(2) {
+  background-color: #6F9283;
+}
+body .main-aktualnosti .aktualnosti .aktualnosti-card .date-banner div.color-div:nth-child(3) {
+  background-color: #74526C;
+}
+body .main-aktualnosti .aktualnosti .aktualnosti-card .date-banner div.color-div:nth-child(4) {
+  background-color: #DBA04D;
+}
+body .main-aktualnosti .aktualnosti .aktualnosti-card button {
+  background-color: #fff;
+  border: 1px solid #A38B5B;
+  color: #A38B5B;
+  font-size: 14px;
+  transition: all 0.3s linear;
+}
+body .main-aktualnosti .aktualnosti .aktualnosti-card button:hover {
+  background-color: #A38B5B;
+  color: #fff;
+  transition: all 0.3s linear;
 }
 footer {
   height: 369px;
