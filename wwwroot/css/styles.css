@@ -97,13 +97,35 @@ body .main-aktualnosti .aktualnosti {
   max-width: 1420px;
   margin: 0 auto;
 }
-body footer {
+body .main-aktualnosti .aktualnosti .aktualnosti-card .card-img img {
+  max-width: 322px;
+  max-height: 234px;
+}
+body .main-aktualnosti .aktualnosti .aktualnosti-card .card-img span {
+  display: inline-block;
+  position: relative;
+  bottom: 15px;
+  background-color: #A38B5B;
+  color: #fff;
+  width: 264px;
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+}
+body .main-aktualnosti .aktualnosti .aktualnosti-card .card-img span.color-span {
+  display: inline-block;
+  position: relative;
+  bottom: 15px;
+  background-color: red;
+  height: 24px;
+  width: 30px;
+  clip-path: polygon(36% 0, 100% 0, 100% 100%, 0% 100%);
+}
+footer {
   height: 369px;
   border-top: 1px solid #A38B5B;
   margin-top: 84px;
   background: linear-gradient(to bottom, #fff 326px, #3C3835 43px);
 }
-body footer .footer-div {
+footer .footer-div {
   width: 100%;
   max-width: 1420px;
   margin: 0 auto;
@@ -111,26 +133,26 @@ body footer .footer-div {
   font-weight: 400;
   font-size: 14px;
 }
-body footer .footer-div .foot-contact,
-body footer .footer-div .foot-links,
-body footer .footer-div .foot-newsletter,
-body footer .footer-div .foot-icons {
+footer .footer-div .foot-contact,
+footer .footer-div .foot-links,
+footer .footer-div .foot-newsletter,
+footer .footer-div .foot-icons {
   position: relative;
   height: 369px;
   padding-top: 44px;
 }
-body footer .footer-div .foot-links {
+footer .footer-div .foot-links {
   font-weight: 600;
   font-size: 16px;
 }
-body footer .footer-div .foot-newsletter label {
+footer .footer-div .foot-newsletter label {
   font-size: 12px;
 }
-body footer .footer-div .foot-newsletter label a {
+footer .footer-div .foot-newsletter label a {
   color: #000;
   text-decoration: underline;
 }
-body footer .footer-div .copyright {
+footer .footer-div .copyright {
   color: #fff;
   font-size: 14px;
   font-weight: 400;
@@ -138,9 +160,9 @@ body footer .footer-div .copyright {
   position: absolute;
   bottom: 12px;
 }
-body footer .footer-div .copyright-right {
+footer .footer-div .copyright-right {
   right: 0;
 }
-body footer .footer-div .copyright-left {
+footer .footer-div .copyright-left {
   left: 40px;
 }

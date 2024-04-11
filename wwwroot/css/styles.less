@@ -137,61 +137,92 @@ body {
             width: 100%;
             max-width: 1420px;
             margin: 0 auto;
-        }
-    }
 
-    footer {
-        height: 369px;
-        border-top: 1px solid @gold;
-        margin-top: 84px;
-        background: linear-gradient(to bottom, @white 326px, @font-dark 43px);
+            .aktualnosti-card {
 
-        .footer-div {
-            width: 100%;
-            max-width: 1420px;
-            margin: 0 auto;
-            color: #000;
-            font-weight: 400;
-            font-size: 14px;
+                .card-img {
 
-            .foot-contact, .foot-links, .foot-newsletter, .foot-icons {
-                position: relative;
-                height: 369px;
-                padding-top: 44px;
-            }
+                    img {
+                        max-width: 322px;
+                        max-height: 234px;
+                    }
 
-            .foot-links {
-                font-weight: 600;
-                font-size: 16px;
-            }
+                    span {
+                        display: inline-block;
+                        position: relative;
+                        bottom: 15px;
+                        background-color: @gold;
+                        color: @white;
+                        width: 264px;
+                        clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+                    }
 
-            .foot-newsletter {
-                label {
-                    font-size: 12px;
-
-                    a {
-                        color: #000;
-                        text-decoration: underline;
+                    span.color-span {
+                        display: inline-block;
+                        position: relative;
+                        bottom: 15px;
+                        background-color: red;
+                        height: 24px;
+                        width: 30px;
+                        clip-path: polygon(36% 0, 100% 0, 100% 100%, 0% 100%);
                     }
                 }
             }
+        }
+    }
+}
 
-            .copyright {
-                color: @white;
-                font-size: 14px;
-                font-weight: 400;
-                display: inline-block;
-                position: absolute;
-                bottom: 12px;
-            }
+footer {
+    height: 369px;
+    border-top: 1px solid @gold;
+    margin-top: 84px;
+    background: linear-gradient(to bottom, @white 326px, @font-dark 43px);
 
-            .copyright-right {
-                right: 0;
-            }
+    .footer-div {
+        width: 100%;
+        max-width: 1420px;
+        margin: 0 auto;
+        color: #000;
+        font-weight: 400;
+        font-size: 14px;
 
-            .copyright-left {
-                left: 40px;
+        .foot-contact, .foot-links, .foot-newsletter, .foot-icons {
+            position: relative;
+            height: 369px;
+            padding-top: 44px;
+        }
+
+        .foot-links {
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .foot-newsletter {
+            label {
+                font-size: 12px;
+
+                a {
+                    color: #000;
+                    text-decoration: underline;
+                }
             }
+        }
+
+        .copyright {
+            color: @white;
+            font-size: 14px;
+            font-weight: 400;
+            display: inline-block;
+            position: absolute;
+            bottom: 12px;
+        }
+
+        .copyright-right {
+            right: 0;
+        }
+
+        .copyright-left {
+            left: 40px;
         }
     }
 }
