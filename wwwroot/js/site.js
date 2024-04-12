@@ -1,4 +1,13 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿
+$(document).ready(function () {
+    var slider = $('.slider').bxSlider();
+    $('.slider-back').click(function () {
+        slider.goToPrevSlide();
+    });
 
-// Write your JavaScript code.
+    $('.slider-next').click(function () {
+        slider.goToNextSlide();
+    });
+
+
+})

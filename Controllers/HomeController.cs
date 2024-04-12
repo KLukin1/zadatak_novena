@@ -23,7 +23,8 @@ namespace Zadatak_Novena.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        [Route("povijest-muzeja")]
+        public IActionResult PovijestMuzeja()
         {
             return View();
         }
