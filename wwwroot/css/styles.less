@@ -2,7 +2,6 @@
 @white: #fff;
 @light-background: #F6F4F0;
 @gold: #A38B5B;
-@gray: #82807E;
 @font-dark: #3C3835;
 @font-medium: #82807E;
 @dark-indigo: #425863;
@@ -67,7 +66,7 @@
     }
 
     &:last-child {
-        color: @gray;
+        color: @font-medium;
     }
 }
 
@@ -209,9 +208,37 @@ body {
                 }
             }
         }
+    }
 
-        .main-icons {
+    .main-info {
+        width: 100%;
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 50px 0;
+
+        .main-icons-div {
             background-color: @light-background;
+            padding: 6px 23px 12px 23px;
+
+            .main-icons {
+                display: flex;
+                justify-content: space-around;
+
+                a {
+                    color: @font-medium;
+
+                    img {
+                        display: block;
+                        margin: 0 auto;
+                        padding-bottom: 15px;
+                    }
+
+                    span {
+                        display: block;
+                        text-align: center;
+                    }
+                }
+            }
         }
     }
 
@@ -222,6 +249,7 @@ body {
             width: 100%;
             max-width: 1420px;
             margin: 0 auto;
+            padding: 60px 0;
 
             .aktualnosti-top {
                 display: flex;
@@ -247,7 +275,6 @@ body {
                 position: relative;
 
                 .card-img {
-                    width: 312px;
                     height: 234px;
                     overflow: hidden;
                     margin: 0 auto;
@@ -264,7 +291,7 @@ body {
                     height: 34px;
                     position: relative;
                     bottom: 18px;
-                    left: 1px;
+                    left: 0;
 
                     .date-text {
                         background-color: @gold;
@@ -280,7 +307,7 @@ body {
 
                     div.color-div {
                         width: 30px;
-                        margin-left: -10px;
+                        margin-left: -12px;
                         clip-path: polygon(51% 0, 100% 0, 100% 100%, 0% 100%);
                     }
                 }
@@ -345,13 +372,29 @@ footer {
         padding-top: 44px;
 
         .foot-top {
-            display: flex;
-            justify-content: space-between;
+            .foot-icons {
+                text-align: end;
+            }
         }
 
         .foot-mid {
-            padding-top: 9px;
-            height: 200px;
+            padding: 9px 0 27px 0;
+
+            div {
+                position: relative;
+            }
+
+            .copyright {
+                color: @white;
+                font-size: 14px;
+                font-weight: 400;
+                position: absolute;
+                bottom: -57px;
+            }
+
+            .copyright-right {
+                right: 0
+            }
 
             .foot-links {
                 font-weight: 600;
@@ -370,6 +413,9 @@ footer {
 
                 label {
                     font-size: 12px;
+                    display: inline-block;
+                    width: 270px;
+                    margin-left: 20px;
 
                     a {
                         color: #000;
@@ -378,6 +424,7 @@ footer {
                 }
 
                 button {
+                    margin-top: 16px;
                     transition: all 0.3s linear;
 
                     &:hover {
@@ -399,24 +446,13 @@ footer {
             width: 100%;
             max-width: 1420px;
             margin: 0 auto;
-
-            .copyright {
-                color: @white;
-                font-size: 14px;
-                font-weight: 400;
-                /*display: inline-block;*/
-                /*position: absolute;*/
-                /*bottom: 12px;*/
-            }
-
-            .copyright-right {
-                /*right: 0;*/
-            }
-
-            .copyright-left {
-                /*left: 40px;*/
-            }
         }
+    }
+}
+
+@media only screen and (min-width: 1001px) and (max-width: 1500px) {
+    body {
+        padding: 0 40px;
     }
 }
 
@@ -425,10 +461,15 @@ footer {
     body {
         padding: 0 20px;
 
+        .mobile-hide {
+            display: none;
+        }
+
         header {
             height: 100px;
             border-left: none;
             border-right: none;
+            position: fixed;
 
             .top-logo {
                 border: none;
@@ -558,6 +599,32 @@ footer {
                     margin: 9px 24px;
                 }
             }
+        }
+
+        .vertical-spacer {
+            height: 80px;
+            width: 100%;
+        }
+
+        .main-top {
+
+            .main-icons-div {
+                h2 {
+                    font-size: 22px;
+                }
+
+                img {
+                    height: 45px;
+                }
+
+                span {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .main-aktualnosti {
+            padding: 0 20px;
         }
     }
 }

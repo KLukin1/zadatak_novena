@@ -157,8 +157,31 @@ body .main-top .slider div .captions .slider-next span svg {
   width: 110px;
   color: #4D4A47;
 }
-body .main-top .main-icons {
+body .main-info {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+body .main-info .main-icons-div {
   background-color: #F6F4F0;
+  padding: 6px 23px 12px 23px;
+}
+body .main-info .main-icons-div .main-icons {
+  display: flex;
+  justify-content: space-around;
+}
+body .main-info .main-icons-div .main-icons a {
+  color: #82807E;
+}
+body .main-info .main-icons-div .main-icons a img {
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 15px;
+}
+body .main-info .main-icons-div .main-icons a span {
+  display: block;
+  text-align: center;
 }
 body .main-aktualnosti {
   background-color: #F6F4F0;
@@ -167,6 +190,7 @@ body .main-aktualnosti .aktualnosti {
   width: 100%;
   max-width: 1420px;
   margin: 0 auto;
+  padding: 60px 0;
 }
 body .main-aktualnosti .aktualnosti .aktualnosti-top {
   display: flex;
@@ -190,7 +214,6 @@ body .main-aktualnosti .aktualnosti .aktualnosti-card {
   position: relative;
 }
 body .main-aktualnosti .aktualnosti .aktualnosti-card .card-img {
-  width: 312px;
   height: 234px;
   overflow: hidden;
   margin: 0 auto;
@@ -205,7 +228,7 @@ body .main-aktualnosti .aktualnosti .aktualnosti-card .date-banner {
   height: 34px;
   position: relative;
   bottom: 18px;
-  left: 1px;
+  left: 0;
 }
 body .main-aktualnosti .aktualnosti .aktualnosti-card .date-banner .date-text {
   background-color: #A38B5B;
@@ -220,7 +243,7 @@ body .main-aktualnosti .aktualnosti .aktualnosti-card .date-banner .date-text {
 }
 body .main-aktualnosti .aktualnosti .aktualnosti-card .date-banner div.color-div {
   width: 30px;
-  margin-left: -10px;
+  margin-left: -12px;
   clip-path: polygon(51% 0, 100% 0, 100% 100%, 0% 100%);
 }
 body .main-aktualnosti .aktualnosti .aktualnosti-card .aktualnosti-info {
@@ -272,13 +295,24 @@ footer .footer-div {
   font-size: 14px;
   padding-top: 44px;
 }
-footer .footer-div .foot-top {
-  display: flex;
-  justify-content: space-between;
+footer .footer-div .foot-top .foot-icons {
+  text-align: end;
 }
 footer .footer-div .foot-mid {
-  padding-top: 9px;
-  height: 200px;
+  padding: 9px 0 27px 0;
+}
+footer .footer-div .foot-mid div {
+  position: relative;
+}
+footer .footer-div .foot-mid .copyright {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  position: absolute;
+  bottom: -57px;
+}
+footer .footer-div .foot-mid .copyright-right {
+  right: 0;
 }
 footer .footer-div .foot-mid .foot-links {
   font-weight: 600;
@@ -293,12 +327,16 @@ footer .footer-div .foot-mid .foot-newsletter .uk-checkbox {
 }
 footer .footer-div .foot-mid .foot-newsletter label {
   font-size: 12px;
+  display: inline-block;
+  width: 270px;
+  margin-left: 20px;
 }
 footer .footer-div .foot-mid .foot-newsletter label a {
   color: #000;
   text-decoration: underline;
 }
 footer .footer-div .foot-mid .foot-newsletter button {
+  margin-top: 16px;
   transition: all 0.3s linear;
 }
 footer .footer-div .foot-mid .foot-newsletter button:hover {
@@ -316,28 +354,23 @@ footer .foot-bottom .foot-bottom-div {
   max-width: 1420px;
   margin: 0 auto;
 }
-footer .foot-bottom .foot-bottom-div .copyright {
-  color: #fff;
-  font-size: 14px;
-  font-weight: 400;
-  /*display: inline-block;*/
-  /*position: absolute;*/
-  /*bottom: 12px;*/
-}
-footer .foot-bottom .foot-bottom-div .copyright-right {
-  /*right: 0;*/
-}
-footer .foot-bottom .foot-bottom-div .copyright-left {
-  /*left: 40px;*/
+@media only screen and (min-width: 1001px) and (max-width: 1500px) {
+  body {
+    padding: 0 40px;
+  }
 }
 @media only screen and (max-width: 1000px) {
   body {
     padding: 0 20px;
   }
+  body .mobile-hide {
+    display: none;
+  }
   body header {
     height: 100px;
     border-left: none;
     border-right: none;
+    position: fixed;
   }
   body header .top-logo {
     border: none;
@@ -446,5 +479,21 @@ footer .foot-bottom .foot-bottom-div .copyright-left {
   }
   body header .hamburger-menu .knezeva-palaca {
     margin: 9px 24px;
+  }
+  body .vertical-spacer {
+    height: 80px;
+    width: 100%;
+  }
+  body .main-top .main-icons-div h2 {
+    font-size: 22px;
+  }
+  body .main-top .main-icons-div img {
+    height: 45px;
+  }
+  body .main-top .main-icons-div span {
+    font-size: 14px;
+  }
+  body .main-aktualnosti {
+    padding: 0 20px;
   }
 }

@@ -22,7 +22,9 @@
 <body>
     <header>
         <div class="top-logo">
-            <img src="\img\Logo_nas_rucno_crtani.png" />
+            <a href="/">
+                <img src="\img\Logo_nas_rucno_crtani.png" />
+            </a>
         </div>
         <div class="top-center">
             <div class="top-bar">
@@ -83,11 +85,12 @@
             </label>
 
             <ul class="menu__box">
-                <li><span class="menu__item" href="#">
+                <li>
+                    <span class="menu__item" href="#">
                         <input id="check01" type="checkbox" name="menu" />
                         <label for="check01">O muzeju <span uk-icon="chevron-down"></span></label>
                         <ul class="submenu">
-                            <li><a href="#">Povijest muzeja</a></li>
+                            <li><a href="\povijest-muzeja">Povijest muzeja</a></li>
                             <li><a href="#">O nama</a></li>
                             <li><a href="#">Kontakt</a></li>
                         </ul>
@@ -98,7 +101,8 @@
                 <li><a class="menu__item" href="#">Izložbe</a></li>
                 <li><a class="menu__item" href="#">Edukacija</a></li>
                 <li><a class="menu__item" href="#">Izdavaštvo</a></li>
-                <li><span class="menu__item" href="#">
+                <li>
+                    <span class="menu__item" href="#">
                         <input id="check02" type="checkbox" name="menu" />
                         <label for="check02">Zbirke <span uk-icon="chevron-down"></span></label>
                         <ul class="submenu">
@@ -124,26 +128,27 @@
             </ul>
         </div>
     </header>
+
+    <div class="vertical-spacer"></div>
+
     <main role="main">
         @RenderBody()
     </main>
 
     <footer>
         <div class="footer-div">
-            <div class="foot-top">
-                <div>
+            <div class="foot-top" uk-grid>
+                <div class="uk-width-1-2">
                     <img src="\img\Logo_nas_rucno_crtani.png" />
                 </div>
-                <div class="foot-icons">
+                <div class="foot-icons uk-width-1-2">
                     <a><img src="\img\facebook.svg" /></a>
                     <a><img src="\img\instagram.svg" /></a>
                     <a><img src="\img\youtube.svg" /></a>
                 </div>
             </div>
             <div class="foot-mid" uk-grid>
-
-                <div class="uk-width-1-1@s uk-width-1-1@m uk-width-1-2@l" uk-grid>
-
+                <div class="uk-width-1-1@xs uk-width-1-2@s uk-width-1-2@m uk-width-1-2@l" uk-grid>
                     <div class="uk-width-1-1@s uk-width-1-2@m">
                         <div class="foot-contact">
                             Narodni muzej Zadar <br />
@@ -153,40 +158,38 @@
                             FAx: 023/251-044 <br /><br />
                             info@nmz.hr
                         </div>
+                        <span class="copyright copyright-right mobile-hide">Copyright (c) NMZ 2018.</span>
                     </div>
-
                     <div class="uk-width-1-1@s uk-width-1-2@m">
                         <div class="foot-links">
                             <a>Najam prostora</a>
                             <a>Press</a>
                             <a>Multimedia</a>
                         </div>
+                        <span class="copyright mobile-hide">Pravne napomene/Impressium</span>
                     </div>
-
                 </div>
-
-                <div class=" uk-width-1-1@s uk-width-1-1@m uk-width-1-2@l">
+                <div class="uk-width-1-1@xs uk-width-1-2@s uk-width-1-2@m uk-width-1-2@l">
                     <div class="foot-newsletter">
                         <form>
                             <div>
                                 <span>Prijavi se na newsletter</span><br />
                                 <input class="uk-input uk-form-width-medium" type="email" />
-                                <label><input class="uk-checkbox" type="checkbox"> Pročitao sam i prihvaćam <a href="#">Opće uvjete korištenja i izjavu o povjerljivosti podataka</a></label>
+                                <div>
+                                    <input class="uk-checkbox" type="checkbox" name="cbSubscription">
+                                    <label for="cbSubscription">Pročitao sam i prihvaćam <a href="#">Opće uvjete korištenja i izjavu o povjerljivosti podataka</a></label>
+                                </div>
                             </div>
                             <button class="uk-button uk-button-default">Pošalji</button>
                         </form>
                     </div>
+                    <span class="copyright copyright-right mobile-hide">Izrada NOVENA</span>
                 </div>
-
             </div>
         </div>
         <div class="foot-bottom">
-            <div class="foot-bottom-div">
-                <span class="copyright copyright-right">Copyright (c) NMZ 2018.</span>
-                <span class="copyright copyright-left">Pravne napomene/Impressium</span>
-                <span class="copyright copyright-right">Izrada NOVENA</span>
+            <div class="foot-bottom-div" uk-grid>
             </div>
-        </div>
     </footer>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
