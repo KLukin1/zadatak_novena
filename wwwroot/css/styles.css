@@ -51,19 +51,21 @@ body {
   font-family: Open Sans;
 }
 body header {
-  background-color: #fff;
-  border-right: 1px solid #A38B5B;
-  border-left: 1px solid #A38B5B;
-  border-bottom: 1px solid #A38B5B;
   width: 100%;
   max-width: 1420px;
-  height: 133px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+body header .header-border {
+  background-color: #fff;
+  border-bottom: 1px solid #A38B5B;
+  border-right: 1px solid #A38B5B;
+  border-left: 1px solid #A38B5B;
+  height: 133px;
   padding-top: 10px;
   display: flex;
   align-items: center;
-  position: relative;
-  z-index: 1;
 }
 body header .top-logo {
   width: 206px;
@@ -162,6 +164,11 @@ body .main-info {
   max-width: 1180px;
   margin: 0 auto;
   padding: 50px 0;
+}
+body .main-info h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #3C3835;
 }
 body .main-info .main-icons-div {
   background-color: #F6F4F0;
@@ -401,15 +408,35 @@ body footer .footer-div .foot-mid .foot-links a {
   display: block;
   color: #000;
 }
-body footer .footer-div .foot-mid .foot-newsletter .uk-input,
+body footer .footer-div .foot-mid .foot-newsletter span {
+  display: block;
+  margin-bottom: 4px;
+}
+body footer .footer-div .foot-mid .foot-newsletter .input-newsletter {
+  display: flex;
+  align-items: center;
+}
+body footer .footer-div .foot-mid .foot-newsletter .input-newsletter div {
+  margin-left: 20px;
+}
+body footer .footer-div .foot-mid .foot-newsletter .uk-input {
+  border-color: #A38B5B;
+  width: 220px;
+  height: 30px;
+}
 body footer .footer-div .foot-mid .foot-newsletter .uk-checkbox {
   border-color: #A38B5B;
+  height: 15px;
+  width: 15px;
+  display: inline-block;
+  position: relative;
+  top: -7px;
 }
 body footer .footer-div .foot-mid .foot-newsletter label {
   font-size: 12px;
   display: inline-block;
   width: 270px;
-  margin-left: 20px;
+  margin-left: 12px;
 }
 body footer .footer-div .foot-mid .foot-newsletter label a {
   color: #000;
@@ -434,27 +461,28 @@ body footer .foot-bottom .foot-bottom-div {
   max-width: 1420px;
   margin: 0 auto;
 }
-@media only screen and (min-width: 1001px) and (max-width: 1500px) {
-  body {
-    padding: 0 40px;
+@media only screen and (max-width: 1500px) {
+  .main-top,
+  .main-aktualnosti {
+    padding: 0 20px;
   }
 }
 @media only screen and (max-width: 1000px) {
-  body {
-    padding: 0 20px;
-  }
   body .mobile-hide {
     display: none;
   }
   body header {
-    height: 100px;
+    position: fixed;
+  }
+  body header .header-border {
+    height: 80px;
     border-left: none;
     border-right: none;
-    position: fixed;
   }
   body header .top-logo {
     border: none;
     width: 100px;
+    padding-left: 40px;
   }
   body header .top-center {
     display: none;
@@ -573,9 +601,6 @@ body footer .foot-bottom .foot-bottom-div {
   body .main-top .main-icons-div span {
     font-size: 14px;
   }
-  body .main-aktualnosti {
-    padding: 0 20px;
-  }
   body .main-aktualnosti .aktualnosti {
     padding: 20px 0;
   }
@@ -593,5 +618,11 @@ body footer .foot-bottom .foot-bottom-div {
   }
   body .povijest .pov-contacts-div .pov-contacts .contact-card {
     padding: 20px 20px 0 20px;
+  }
+  body footer .footer-div .foot-mid .foot-newsletter .input-newsletter {
+    display: block;
+  }
+  body footer .footer-div .foot-mid .foot-newsletter .input-newsletter div {
+    margin-left: 0;
   }
 }

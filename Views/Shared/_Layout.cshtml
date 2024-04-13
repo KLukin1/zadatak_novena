@@ -21,111 +21,113 @@
 </head>
 <body>
     <header>
-        <div class="top-logo">
-            <a href="/">
-                <img src="\img\Logo_nas_rucno_crtani.png" />
-            </a>
-        </div>
-        <div class="top-center">
-            <div class="top-bar">
-                <form class="uk-search uk-search-default">
-                    <span uk-search-icon></span>
-                    <input class="uk-search-input" type="search" placeholder="Search" aria-label="Search">
-                </form>
-                <div class="languages">
-                    <span>Hr</span>
-                    <span>En</span>
-                </div>
-                <div class="top-icons">
-                    <a><img src="\img\facebook.svg" /></a>
-                    <a><img src="\img\instagram.svg" /></a>
-                    <a><img src="\img\youtube.svg" /></a>
-                </div>
-                <div class="knezeva-palaca">
-                    <img src="\img\kneževa_palača_logo.png" />
-                    <span>Kneževa palača</span>
-                </div>
+        <div class="header-border">
+            <div class="top-logo">
+                <a href="/">
+                    <img src="\img\Logo_nas_rucno_crtani.png" />
+                </a>
             </div>
-            <nav class="uk-navbar-container" uk-navbar>
-                <div class="uk-navbar-left">
-
-                    <ul class="uk-navbar-nav">
-                        <li class="uk-active">
-                            <a href="#">O muzeju <span uk-icon="chevron-down"></span></a><div class="uk-navbar-dropdown">
-                                <ul class="uk-nav uk-navbar-dropdown-nav">
-                                    <li><a href="\povijest-muzeja">Povijest muzeja</a></li>
-                                    <li><a href="#">O nama</a></li>
-                                    <li><a href="#">Kontakt</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li><a href="#">Sastavne jedinice</a></li>
-                        <li><a href="#">Događanja</a></li>
-                        <li><a href="#">Izložbe</a></li>
-                        <li><a href="#">Edukacija</a></li>
-                        <li><a href="#">Izdavaštvo</a></li>
-                        <li>
-                            <a href="#">Zbirke <span uk-icon="chevron-down"></span></a><div class="uk-navbar-dropdown">
-                                <ul class="uk-nav uk-navbar-dropdown-nav">
-                                    <li><a href="#">Zbirka 1</a></li>
-                                    <li><a href="#">Zbirka 2</a></li>
-                                    <li><a href="#">Zbirka 3</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-
+            <div class="top-center">
+                <div class="top-bar">
+                    <form class="uk-search uk-search-default">
+                        <span uk-search-icon></span>
+                        <input class="uk-search-input" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                    <div class="languages">
+                        <span>Hr</span>
+                        <span>En</span>
+                    </div>
+                    <div class="top-icons">
+                        <a><img src="\img\facebook.svg" /></a>
+                        <a><img src="\img\instagram.svg" /></a>
+                        <a><img src="\img\youtube.svg" /></a>
+                    </div>
+                    <div class="knezeva-palaca">
+                        <img src="\img\kneževa_palača_logo.png" />
+                        <span>Kneževa palača</span>
+                    </div>
                 </div>
-            </nav>
-        </div>
-        <div class="hamburger-menu">
-            <input id="menu__toggle" type="checkbox" />
-            <label class="menu__btn" for="menu__toggle">
-                <span></span>
-            </label>
+                <nav class="uk-navbar-container" uk-navbar>
+                    <div class="uk-navbar-left">
 
-            <ul class="menu__box">
-                <li>
-                    <span class="menu__item" href="#">
-                        <input id="check01" type="checkbox" name="menu" />
-                        <label for="check01">O muzeju <span uk-icon="chevron-down"></span></label>
-                        <ul class="submenu">
-                            <li><a href="\povijest-muzeja">Povijest muzeja</a></li>
-                            <li><a href="#">O nama</a></li>
-                            <li><a href="#">Kontakt</a></li>
+                        <ul class="uk-navbar-nav">
+                            <li class="uk-active">
+                                <a href="#">O muzeju <span uk-icon="chevron-down"></span></a><div class="uk-navbar-dropdown">
+                                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                                        <li><a href="\povijest-muzeja">Povijest muzeja</a></li>
+                                        <li><a href="#">O nama</a></li>
+                                        <li><a href="#">Kontakt</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="#">Sastavne jedinice</a></li>
+                            <li><a href="#">Događanja</a></li>
+                            <li><a href="#">Izložbe</a></li>
+                            <li><a href="#">Edukacija</a></li>
+                            <li><a href="#">Izdavaštvo</a></li>
+                            <li>
+                                <a href="#">Zbirke <span uk-icon="chevron-down"></span></a><div class="uk-navbar-dropdown">
+                                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                                        <li><a href="#">Zbirka 1</a></li>
+                                        <li><a href="#">Zbirka 2</a></li>
+                                        <li><a href="#">Zbirka 3</a></li>
+                                    </ul>
+                                </div>
+                            </li>
                         </ul>
-                    </span>
-                </li>
-                <li><a class="menu__item" href="#">Sastavne jedinice</a></li>
-                <li><a class="menu__item" href="#">Događanja</a></li>
-                <li><a class="menu__item" href="#">Izložbe</a></li>
-                <li><a class="menu__item" href="#">Edukacija</a></li>
-                <li><a class="menu__item" href="#">Izdavaštvo</a></li>
-                <li>
-                    <span class="menu__item" href="#">
-                        <input id="check02" type="checkbox" name="menu" />
-                        <label for="check02">Zbirke <span uk-icon="chevron-down"></span></label>
-                        <ul class="submenu">
-                            <li><a href="#">Zbirka 1</a></li>
-                            <li><a href="#">Zbirka 2</a></li>
-                            <li><a href="#">Zbirka 3</a></li>
-                        </ul>
-                    </span>
-                </li>
-                <div class="knezeva-palaca">
-                    <img src="\img\kneževa_palača_logo.png" />
-                    <span>Kneževa palača</span>
-                </div>
-                <div class="languages">
-                    <span>Hr</span>
-                    <span>En</span>
-                </div>
-                <div class="top-icons">
-                    <a><img src="\img\facebook.svg" /></a>
-                    <a><img src="\img\instagram.svg" /></a>
-                    <a><img src="\img\youtube.svg" /></a>
-                </div>
-            </ul>
+
+                    </div>
+                </nav>
+            </div>
+            <div class="hamburger-menu">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                    <span></span>
+                </label>
+
+                <ul class="menu__box">
+                    <li>
+                        <span class="menu__item" href="#">
+                            <input id="check01" type="checkbox" name="menu" />
+                            <label for="check01">O muzeju <span uk-icon="chevron-down"></span></label>
+                            <ul class="submenu">
+                                <li><a href="\povijest-muzeja">Povijest muzeja</a></li>
+                                <li><a href="#">O nama</a></li>
+                                <li><a href="#">Kontakt</a></li>
+                            </ul>
+                        </span>
+                    </li>
+                    <li><a class="menu__item" href="#">Sastavne jedinice</a></li>
+                    <li><a class="menu__item" href="#">Događanja</a></li>
+                    <li><a class="menu__item" href="#">Izložbe</a></li>
+                    <li><a class="menu__item" href="#">Edukacija</a></li>
+                    <li><a class="menu__item" href="#">Izdavaštvo</a></li>
+                    <li>
+                        <span class="menu__item" href="#">
+                            <input id="check02" type="checkbox" name="menu" />
+                            <label for="check02">Zbirke <span uk-icon="chevron-down"></span></label>
+                            <ul class="submenu">
+                                <li><a href="#">Zbirka 1</a></li>
+                                <li><a href="#">Zbirka 2</a></li>
+                                <li><a href="#">Zbirka 3</a></li>
+                            </ul>
+                        </span>
+                    </li>
+                    <div class="knezeva-palaca">
+                        <img src="\img\kneževa_palača_logo.png" />
+                        <span>Kneževa palača</span>
+                    </div>
+                    <div class="languages">
+                        <span>Hr</span>
+                        <span>En</span>
+                    </div>
+                    <div class="top-icons">
+                        <a><img src="\img\facebook.svg" /></a>
+                        <a><img src="\img\instagram.svg" /></a>
+                        <a><img src="\img\youtube.svg" /></a>
+                    </div>
+                </ul>
+            </div>
         </div>
     </header>
 
@@ -136,54 +138,58 @@
     </main>
 
     <footer>
-        <div class="footer-div">
-            <div class="foot-top" uk-grid>
-                <div class="uk-width-1-2">
-                    <img src="\img\Logo_nas_rucno_crtani.png" />
-                </div>
-                <div class="foot-icons uk-width-1-2">
-                    <a><img src="\img\facebook.svg" /></a>
-                    <a><img src="\img\instagram.svg" /></a>
-                    <a><img src="\img\youtube.svg" /></a>
-                </div>
-            </div>
-            <div class="foot-mid" uk-grid>
-                <div class="uk-width-1-1@xs uk-width-1-2@s uk-width-1-2@m uk-width-1-2@l" uk-grid>
-                    <div class="uk-width-1-1@s uk-width-1-2@m">
-                        <div class="foot-contact">
-                            Narodni muzej Zadar <br />
-                            Poljana pape Aleksandra III b.b., <br />
-                            23000 Zadar <br /><br />
-                            Tel: 023/251-851 <br />
-                            FAx: 023/251-044 <br /><br />
-                            info@nmz.hr
-                        </div>
-                        <span class="copyright copyright-right mobile-hide">Copyright (c) NMZ 2018.</span>
+        <div class="foot-container">
+            <div class="footer-div">
+                <div class="foot-top" uk-grid>
+                    <div class="uk-width-1-2">
+                        <img src="\img\Logo_nas_rucno_crtani.png" />
                     </div>
-                    <div class="uk-width-1-1@s uk-width-1-2@m">
-                        <div class="foot-links">
-                            <a>Najam prostora</a>
-                            <a>Press</a>
-                            <a>Multimedia</a>
-                        </div>
-                        <span class="copyright mobile-hide">Pravne napomene/Impressium</span>
+                    <div class="foot-icons uk-width-1-2">
+                        <a><img src="\img\facebook.svg" /></a>
+                        <a><img src="\img\instagram.svg" /></a>
+                        <a><img src="\img\youtube.svg" /></a>
                     </div>
                 </div>
-                <div class="uk-width-1-1@xs uk-width-1-2@s uk-width-1-2@m uk-width-1-2@l">
-                    <div class="foot-newsletter">
-                        <form>
-                            <div>
-                                <span>Prijavi se na newsletter</span><br />
-                                <input class="uk-input uk-form-width-medium" type="email" />
-                                <div>
-                                    <input class="uk-checkbox" type="checkbox" name="cbSubscription">
-                                    <label for="cbSubscription">Pročitao sam i prihvaćam <a href="#">Opće uvjete korištenja i izjavu o povjerljivosti podataka</a></label>
-                                </div>
+                <div class="foot-mid" uk-grid>
+                    <div class="uk-width-1-1@xs uk-width-1-2@s uk-width-1-2@m uk-width-1-2@l" uk-grid>
+                        <div class="uk-width-1-1@s uk-width-1-2@m">
+                            <div class="foot-contact">
+                                Narodni muzej Zadar <br />
+                                Poljana pape Aleksandra III b.b., <br />
+                                23000 Zadar <br /><br />
+                                Tel: 023/251-851 <br />
+                                FAx: 023/251-044 <br /><br />
+                                info@nmz.hr
                             </div>
-                            <button class="uk-button uk-button-default">Pošalji</button>
-                        </form>
+                            <span class="copyright copyright-right mobile-hide">Copyright (c) NMZ 2018.</span>
+                        </div>
+                        <div class="uk-width-1-1@s uk-width-1-2@m">
+                            <div class="foot-links">
+                                <a>Najam prostora</a>
+                                <a>Press</a>
+                                <a>Multimedia</a>
+                            </div>
+                            <span class="copyright mobile-hide">Pravne napomene/Impressium</span>
+                        </div>
                     </div>
-                    <span class="copyright copyright-right mobile-hide">Izrada NOVENA</span>
+                    <div class="uk-width-1-1@xs uk-width-1-2@s uk-width-1-2@m uk-width-1-2@l">
+                        <div class="foot-newsletter">
+                            <form>
+                                <div>
+                                    <span>Prijavi se na newsletter</span>
+                                    <div class="input-newsletter">
+                                        <input class="uk-input uk-form-width-medium" type="email" />
+                                        <div>
+                                            <input class="uk-checkbox" type="checkbox" name="cbSubscription">
+                                            <label for="cbSubscription">Pročitao sam i prihvaćam <a href="#">Opće uvjete korištenja i izjavu o povjerljivosti podataka</a></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="uk-button uk-button-default">Pošalji</button>
+                            </form>
+                        </div>
+                        <span class="copyright copyright-right mobile-hide">Izrada NOVENA</span>
+                    </div>
                 </div>
             </div>
         </div>

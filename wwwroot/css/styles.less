@@ -5,6 +5,7 @@
 @font-dark: #3C3835;
 @font-medium: #82807E;
 @dark-indigo: #425863;
+@content-width: 1420px;
 
 // uikit overrides
 .uk-button-default {
@@ -76,19 +77,22 @@ body {
     font-family: Open Sans;
 
     header {
-        background-color: @white;
-        border-right: 1px solid @gold;
-        border-left: 1px solid @gold;
-        border-bottom: 1px solid @gold;
         width: 100%;
-        max-width: 1420px;
-        height: 133px;
+        max-width: @content-width;
         margin: 0 auto;
-        padding-top: 10px;
-        display: flex;
-        align-items: center;
         position: relative;
         z-index: 1;
+
+        .header-border {
+            background-color: @white;
+            border-bottom: 1px solid @gold;
+            border-right: 1px solid @gold;
+            border-left: 1px solid @gold;
+            height: 133px;
+            padding-top: 10px;
+            display: flex;
+            align-items: center;
+        }
 
         .top-logo {
             width: 206px;
@@ -216,6 +220,12 @@ body {
         margin: 0 auto;
         padding: 50px 0;
 
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: @font-dark;
+        }
+
         .main-icons-div {
             background-color: @light-background;
             padding: 6px 23px 12px 23px;
@@ -247,7 +257,7 @@ body {
 
         .aktualnosti {
             width: 100%;
-            max-width: 1420px;
+            max-width: @content-width;
             margin: 0 auto;
             padding: 60px 0;
 
@@ -470,7 +480,7 @@ body {
 
         .footer-div {
             width: 100%;
-            max-width: 1420px;
+            max-width: @content-width;
             margin: 0 auto;
             color: #000;
             font-weight: 400;
@@ -513,15 +523,40 @@ body {
 
                 .foot-newsletter {
 
-                    .uk-input, .uk-checkbox {
+                    span {
+                        display: block;
+                        margin-bottom: 4px;
+                    }
+
+                    .input-newsletter {
+                        display: flex;
+                        align-items: center;
+
+                        div {
+                            margin-left: 20px;
+                        }
+                    }
+
+                    .uk-input {
                         border-color: @gold;
+                        width: 220px;
+                        height: 30px;
+                    }
+
+                    .uk-checkbox {
+                        border-color: @gold;
+                        height: 15px;
+                        width: 15px;
+                        display: inline-block;
+                        position: relative;
+                        top: -7px;
                     }
 
                     label {
                         font-size: 12px;
                         display: inline-block;
                         width: 270px;
-                        margin-left: 20px;
+                        margin-left: 12px;
 
                         a {
                             color: #000;
@@ -550,37 +585,40 @@ body {
 
             .foot-bottom-div {
                 width: 100%;
-                max-width: 1420px;
+                max-width: @content-width;
                 margin: 0 auto;
             }
         }
     }
 }
 
-@media only screen and (min-width: 1001px) and (max-width: 1500px) {
-    body {
-        padding: 0 40px;
+@media only screen and (max-width: 1500px) {
+    .main-top, .main-aktualnosti {
+        padding: 0 20px;
     }
 }
 
 @media only screen and (max-width: 1000px) {
 
     body {
-        padding: 0 20px;
 
         .mobile-hide {
             display: none;
         }
 
         header {
-            height: 100px;
-            border-left: none;
-            border-right: none;
             position: fixed;
+
+            .header-border {
+                height: 80px;
+                border-left: none;
+                border-right: none;
+            }
 
             .top-logo {
                 border: none;
                 width: 100px;
+                padding-left: 40px;
             }
 
             .top-center {
@@ -731,7 +769,6 @@ body {
         }
 
         .main-aktualnosti {
-            padding: 0 20px;
 
             .aktualnosti {
                 padding: 20px 0;
@@ -759,6 +796,17 @@ body {
 
                 .contact-card {
                     padding: 20px 20px 0 20px;
+                }
+            }
+        }
+
+        footer .footer-div .foot-mid .foot-newsletter {
+
+            .input-newsletter {
+                display: block;
+
+                div {
+                    margin-left: 0;
                 }
             }
         }
