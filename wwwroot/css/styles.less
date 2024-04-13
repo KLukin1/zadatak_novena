@@ -358,6 +358,11 @@ body {
     }
 
     .povijest {
+
+        hr {
+            border-color: #E8E0CC;
+        }
+
         .pov-top, .pov-contacts, .pov-main {
             width: 100%;
             max-width: 1180px;
@@ -392,14 +397,17 @@ body {
             background-color: @light-background;
 
             .pov-contacts {
-                padding: 36px 0;
                 font-weight: 400;
 
-                p {
-                    line-height: 28px;
+                .contact-card {
+                    padding: 36px;
 
-                    strong {
-                        font-weight: 600;
+                    p {
+                        line-height: 28px;
+
+                        strong {
+                            font-weight: 600;
+                        }
                     }
                 }
             }
@@ -430,7 +438,7 @@ body {
 
             .pov-aside {
 
-                div {
+                .aside-div {
                     background-color: @light-background;
                     margin-bottom: 24px;
                     padding: 30px;
@@ -448,7 +456,7 @@ body {
                         line-height: 28px;
                     }
 
-                    &:last-child {
+                    &.longer-div {
                         height: 360px;
                     }
                 }
@@ -724,6 +732,35 @@ body {
 
         .main-aktualnosti {
             padding: 0 20px;
+
+            .aktualnosti {
+                padding: 20px 0;
+
+                .aktualnosti-top {
+
+                    h2, a {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+
+        .povijest {
+
+            .pov-top h1 {
+                font-size: 30px;
+            }
+
+            .pov-contacts-div .pov-contacts {
+
+                * + .uk-grid-margin, .uk-grid + .uk-grid, .uk-grid > .uk-grid-margin {
+                    margin-top: 0;
+                }
+
+                .contact-card {
+                    padding: 20px 20px 0 20px;
+                }
+            }
         }
     }
 }

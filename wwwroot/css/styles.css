@@ -282,6 +282,9 @@ body .main-aktualnosti .aktualnosti .aktualnosti-card .aktualnosti-btn button:ho
   color: #fff;
   transition: all 0.3s linear;
 }
+body .povijest hr {
+  border-color: #E8E0CC;
+}
 body .povijest .pov-top,
 body .povijest .pov-contacts,
 body .povijest .pov-main {
@@ -311,13 +314,15 @@ body .povijest .pov-contacts-div {
   background-color: #F6F4F0;
 }
 body .povijest .pov-contacts-div .pov-contacts {
-  padding: 36px 0;
   font-weight: 400;
 }
-body .povijest .pov-contacts-div .pov-contacts p {
+body .povijest .pov-contacts-div .pov-contacts .contact-card {
+  padding: 36px;
+}
+body .povijest .pov-contacts-div .pov-contacts .contact-card p {
   line-height: 28px;
 }
-body .povijest .pov-contacts-div .pov-contacts p strong {
+body .povijest .pov-contacts-div .pov-contacts .contact-card p strong {
   font-weight: 600;
 }
 body .povijest .pov-main {
@@ -338,23 +343,23 @@ body .povijest .pov-main .pov-article div {
   line-height: 28px;
   padding-top: 30px;
 }
-body .povijest .pov-main .pov-aside div {
+body .povijest .pov-main .pov-aside .aside-div {
   background-color: #F6F4F0;
   margin-bottom: 24px;
   padding: 30px;
 }
-body .povijest .pov-main .pov-aside div h2 {
+body .povijest .pov-main .pov-aside .aside-div h2 {
   color: #3C3835;
   font-size: 18px;
   font-weight: 600;
   line-height: 31px;
 }
-body .povijest .pov-main .pov-aside div a {
+body .povijest .pov-main .pov-aside .aside-div a {
   color: #3C3835;
   font-weight: 400;
   line-height: 28px;
 }
-body .povijest .pov-main .pov-aside div:last-child {
+body .povijest .pov-main .pov-aside .aside-div.longer-div {
   height: 360px;
 }
 body footer {
@@ -570,5 +575,23 @@ body footer .foot-bottom .foot-bottom-div {
   }
   body .main-aktualnosti {
     padding: 0 20px;
+  }
+  body .main-aktualnosti .aktualnosti {
+    padding: 20px 0;
+  }
+  body .main-aktualnosti .aktualnosti .aktualnosti-top h2,
+  body .main-aktualnosti .aktualnosti .aktualnosti-top a {
+    font-size: 18px;
+  }
+  body .povijest .pov-top h1 {
+    font-size: 30px;
+  }
+  body .povijest .pov-contacts-div .pov-contacts * + .uk-grid-margin,
+  body .povijest .pov-contacts-div .pov-contacts .uk-grid + .uk-grid,
+  body .povijest .pov-contacts-div .pov-contacts .uk-grid > .uk-grid-margin {
+    margin-top: 0;
+  }
+  body .povijest .pov-contacts-div .pov-contacts .contact-card {
+    padding: 20px 20px 0 20px;
   }
 }
