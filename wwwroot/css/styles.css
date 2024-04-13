@@ -282,11 +282,86 @@ body .main-aktualnosti .aktualnosti .aktualnosti-card .aktualnosti-btn button:ho
   color: #fff;
   transition: all 0.3s linear;
 }
-footer {
+body .povijest .pov-top,
+body .povijest .pov-contacts,
+body .povijest .pov-main {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+body .povijest .pov-top {
+  padding-top: 40px;
+}
+body .povijest .pov-top .pov-breadcrumb a {
+  font-size: 14px;
+  font-weight: 600;
+  color: #4D4A47;
+}
+body .povijest .pov-top .pov-breadcrumb span {
+  font-size: 14px;
+  font-weight: 700;
+  color: #4D4A47;
+}
+body .povijest .pov-top h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #4D4A47;
+}
+body .povijest .pov-contacts-div {
+  background-color: #F6F4F0;
+}
+body .povijest .pov-contacts-div .pov-contacts {
+  padding: 36px 0;
+  font-weight: 400;
+}
+body .povijest .pov-contacts-div .pov-contacts p {
+  line-height: 28px;
+}
+body .povijest .pov-contacts-div .pov-contacts p strong {
+  font-weight: 600;
+}
+body .povijest .pov-main {
+  padding: 40px 0;
+}
+body .povijest .pov-main .pov-article img {
+  width: 100%;
+}
+body .povijest .pov-main .pov-article figcaption {
+  text-align: end;
+  font-style: italic;
+  font-size: 14px;
+  color: #82807E;
+  padding-top: 6px;
+}
+body .povijest .pov-main .pov-article div {
+  color: #82807E;
+  line-height: 28px;
+  padding-top: 30px;
+}
+body .povijest .pov-main .pov-aside div {
+  background-color: #F6F4F0;
+  margin-bottom: 24px;
+  padding: 30px;
+}
+body .povijest .pov-main .pov-aside div h2 {
+  color: #3C3835;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 31px;
+}
+body .povijest .pov-main .pov-aside div a {
+  color: #3C3835;
+  font-weight: 400;
+  line-height: 28px;
+}
+body .povijest .pov-main .pov-aside div:last-child {
+  height: 360px;
+}
+body footer {
   border-top: 1px solid #A38B5B;
   margin-top: 84px;
 }
-footer .footer-div {
+body footer .footer-div {
   width: 100%;
   max-width: 1420px;
   margin: 0 auto;
@@ -295,61 +370,61 @@ footer .footer-div {
   font-size: 14px;
   padding-top: 44px;
 }
-footer .footer-div .foot-top .foot-icons {
+body footer .footer-div .foot-top .foot-icons {
   text-align: end;
 }
-footer .footer-div .foot-mid {
+body footer .footer-div .foot-mid {
   padding: 9px 0 27px 0;
 }
-footer .footer-div .foot-mid div {
+body footer .footer-div .foot-mid div {
   position: relative;
 }
-footer .footer-div .foot-mid .copyright {
+body footer .footer-div .foot-mid .copyright {
   color: #fff;
   font-size: 14px;
   font-weight: 400;
   position: absolute;
   bottom: -57px;
 }
-footer .footer-div .foot-mid .copyright-right {
+body footer .footer-div .foot-mid .copyright-right {
   right: 0;
 }
-footer .footer-div .foot-mid .foot-links {
+body footer .footer-div .foot-mid .foot-links {
   font-weight: 600;
 }
-footer .footer-div .foot-mid .foot-links a {
+body footer .footer-div .foot-mid .foot-links a {
   display: block;
   color: #000;
 }
-footer .footer-div .foot-mid .foot-newsletter .uk-input,
-footer .footer-div .foot-mid .foot-newsletter .uk-checkbox {
+body footer .footer-div .foot-mid .foot-newsletter .uk-input,
+body footer .footer-div .foot-mid .foot-newsletter .uk-checkbox {
   border-color: #A38B5B;
 }
-footer .footer-div .foot-mid .foot-newsletter label {
+body footer .footer-div .foot-mid .foot-newsletter label {
   font-size: 12px;
   display: inline-block;
   width: 270px;
   margin-left: 20px;
 }
-footer .footer-div .foot-mid .foot-newsletter label a {
+body footer .footer-div .foot-mid .foot-newsletter label a {
   color: #000;
   text-decoration: underline;
 }
-footer .footer-div .foot-mid .foot-newsletter button {
+body footer .footer-div .foot-mid .foot-newsletter button {
   margin-top: 16px;
   transition: all 0.3s linear;
 }
-footer .footer-div .foot-mid .foot-newsletter button:hover {
+body footer .footer-div .foot-mid .foot-newsletter button:hover {
   color: #A38B5B;
   background-color: #fff;
   border: 1px solid #A38B5B;
   transition: all 0.3s linear;
 }
-footer .foot-bottom {
+body footer .foot-bottom {
   height: 43px;
   background-color: #3C3835;
 }
-footer .foot-bottom .foot-bottom-div {
+body footer .foot-bottom .foot-bottom-div {
   width: 100%;
   max-width: 1420px;
   margin: 0 auto;

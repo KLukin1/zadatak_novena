@@ -356,96 +356,195 @@ body {
             }
         }
     }
-}
 
-footer {
-    border-top: 1px solid @gold;
-    margin-top: 84px;
+    .povijest {
+        .pov-top, .pov-contacts, .pov-main {
+            width: 100%;
+            max-width: 1180px;
+            margin: 0 auto;
+        }
 
-    .footer-div {
-        width: 100%;
-        max-width: 1420px;
-        margin: 0 auto;
-        color: #000;
-        font-weight: 400;
-        font-size: 14px;
-        padding-top: 44px;
+        .pov-top {
+            padding-top: 40px;
 
-        .foot-top {
-            .foot-icons {
-                text-align: end;
+            .pov-breadcrumb {
+                a {
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: #4D4A47;
+                }
+
+                span {
+                    font-size: 14px;
+                    font-weight: 700;
+                    color: #4D4A47;
+                }
+            }
+
+            h1 {
+                font-size: 48px;
+                font-weight: 700;
+                color: #4D4A47;
             }
         }
 
-        .foot-mid {
-            padding: 9px 0 27px 0;
+        .pov-contacts-div {
+            background-color: @light-background;
 
-            div {
-                position: relative;
-            }
-
-            .copyright {
-                color: @white;
-                font-size: 14px;
+            .pov-contacts {
+                padding: 36px 0;
                 font-weight: 400;
-                position: absolute;
-                bottom: -57px;
-            }
 
-            .copyright-right {
-                right: 0
-            }
+                p {
+                    line-height: 28px;
 
-            .foot-links {
-                font-weight: 600;
-
-                a {
-                    display: block;
-                    color: #000;
-                }
-            }
-
-            .foot-newsletter {
-
-                .uk-input, .uk-checkbox {
-                    border-color: @gold;
-                }
-
-                label {
-                    font-size: 12px;
-                    display: inline-block;
-                    width: 270px;
-                    margin-left: 20px;
-
-                    a {
-                        color: #000;
-                        text-decoration: underline;
+                    strong {
+                        font-weight: 600;
                     }
                 }
+            }
+        }
 
-                button {
-                    margin-top: 16px;
-                    transition: all 0.3s linear;
+        .pov-main {
+            padding: 40px 0;
 
-                    &:hover {
-                        color: @gold;
-                        background-color: @white;
-                        border: 1px solid @gold;
-                        transition: all 0.3s linear;
+            .pov-article {
+                img {
+                    width: 100%;
+                }
+
+                figcaption {
+                    text-align: end;
+                    font-style: italic;
+                    font-size: 14px;
+                    color: @font-medium;
+                    padding-top: 6px;
+                }
+
+                div {
+                    color: @font-medium;
+                    line-height: 28px;
+                    padding-top: 30px;
+                }
+            }
+
+            .pov-aside {
+
+                div {
+                    background-color: @light-background;
+                    margin-bottom: 24px;
+                    padding: 30px;
+
+                    h2 {
+                        color: @font-dark;
+                        font-size: 18px;
+                        font-weight: 600;
+                        line-height: 31px;
+                    }
+
+                    a {
+                        color: @font-dark;
+                        font-weight: 400;
+                        line-height: 28px;
+                    }
+
+                    &:last-child {
+                        height: 360px;
                     }
                 }
             }
         }
     }
 
-    .foot-bottom {
-        height: 43px;
-        background-color: @font-dark;
+    footer {
+        border-top: 1px solid @gold;
+        margin-top: 84px;
 
-        .foot-bottom-div {
+        .footer-div {
             width: 100%;
             max-width: 1420px;
             margin: 0 auto;
+            color: #000;
+            font-weight: 400;
+            font-size: 14px;
+            padding-top: 44px;
+
+            .foot-top {
+                .foot-icons {
+                    text-align: end;
+                }
+            }
+
+            .foot-mid {
+                padding: 9px 0 27px 0;
+
+                div {
+                    position: relative;
+                }
+
+                .copyright {
+                    color: @white;
+                    font-size: 14px;
+                    font-weight: 400;
+                    position: absolute;
+                    bottom: -57px;
+                }
+
+                .copyright-right {
+                    right: 0
+                }
+
+                .foot-links {
+                    font-weight: 600;
+
+                    a {
+                        display: block;
+                        color: #000;
+                    }
+                }
+
+                .foot-newsletter {
+
+                    .uk-input, .uk-checkbox {
+                        border-color: @gold;
+                    }
+
+                    label {
+                        font-size: 12px;
+                        display: inline-block;
+                        width: 270px;
+                        margin-left: 20px;
+
+                        a {
+                            color: #000;
+                            text-decoration: underline;
+                        }
+                    }
+
+                    button {
+                        margin-top: 16px;
+                        transition: all 0.3s linear;
+
+                        &:hover {
+                            color: @gold;
+                            background-color: @white;
+                            border: 1px solid @gold;
+                            transition: all 0.3s linear;
+                        }
+                    }
+                }
+            }
+        }
+
+        .foot-bottom {
+            height: 43px;
+            background-color: @font-dark;
+
+            .foot-bottom-div {
+                width: 100%;
+                max-width: 1420px;
+                margin: 0 auto;
+            }
         }
     }
 }
