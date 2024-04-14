@@ -7,7 +7,6 @@
 @dark-indigo: #425863;
 @content-width: 1420px;
 
-// uikit overrides
 .uk-button-default {
     background-color: @gold;
     color: @white;
@@ -133,7 +132,11 @@ body {
 
                     .uk-search-input {
                         border: none;
-                        color: @font-dark; //ne radi
+                        color: @font-dark;
+                    }
+
+                    .uk-search-input::placeholder {
+                        color: @font-dark;
                     }
                 }
 
@@ -169,33 +172,64 @@ body {
     .main-top {
 
         .bx-controls-direction {
-            /*display: none;*/
+            display: none;
         }
 
-        .slider {
-            div {
-                img {
-                    width: 100%;
-                    display: block;
-                    height: 770px;
-                    object-fit: cover;
-                }
+        .bx-wrapper {
+            border: none;
+            box-shadow: none;
+        }
 
-                .captions {
-                    width: 940px;
-                    height: 250px;
-                    position: absolute;
-                    top: 630px;
-                    margin-left: auto;
-                    margin-right: auto;
-                    left: 0;
-                    right: 0;
-                    background-color: @white;
-                    padding: 20px;
-                    border-color: @gold;
-                    border-width: 10px 1px 1px 1px;
-                    border-style: solid;
-                    display: flex;
+        .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+            bottom: 156px;
+        }
+
+        .bx-wrapper .bx-pager.bx-default-pager a {
+            background-color: @white;
+            width: 30px;
+            height: 10px;
+            border-radius: 0;
+        }
+
+        .bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {
+            background-color: @gold;
+        }
+
+        .slider-div {
+            margin: -143px 0 143px 0;
+
+            .slider {
+                div {
+                    img {
+                        width: 100%;
+                        display: block;
+                        height: 770px;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            .captions {
+                width: 100%;
+                max-width: 940px;
+                height: 250px;
+                position: absolute;
+                top: 630px;
+                margin-left: auto;
+                margin-right: auto;
+                left: 0;
+                right: 0;
+                background-color: @white;
+                padding: 20px;
+                border-color: @gold;
+                border-width: 10px 1px 1px 1px;
+                border-style: solid;
+                display: flex;
+                justify-content: space-between;
+
+                .slide-info {
+                    width: 100%;
+                    max-width: 730px;
 
                     h3 {
                         font-size: 18px;
@@ -208,10 +242,14 @@ body {
                         font-weight: 700;
                         color: #4D4A47;
                     }
+                }
 
-                    .slider-back span svg, .slider-next span svg {
-                        width: 110px;
-                        color: #4D4A47;
+                .slider-back span svg, .slider-next span svg {
+                    width: 84px;
+                    color: #4D4A47;
+
+                    &:hover {
+                        cursor: pointer;
                     }
                 }
             }
@@ -603,6 +641,22 @@ body {
             padding: 0 20px;
         }
 
+        .main-top {
+
+            .slider-div {
+                .captions {
+                    width: 60%;
+                    height: 200px;
+
+                    .slide-info {
+                        h2 {
+                            font-size: 32px;
+                        }
+                    }
+                }
+            }
+        }
+
         footer .footer-div {
 
             .foot-top {
@@ -808,6 +862,27 @@ body {
 
         .main-top {
 
+            .bx-wrapper .bx-pager, body .main-top .bx-wrapper .bx-controls-auto {
+                bottom: 90px;
+            }
+
+            .slider-div {
+                .captions {
+                    height: 150px;
+
+                    .slide-info {
+                        h2 {
+                            font-size: 24px;
+                            margin-top: 0;
+                        }
+
+                        h3 {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+
             .main-icons-div {
                 h2 {
                     font-size: 22px;
@@ -867,6 +942,46 @@ body {
                     font-size: 14px;
                     font-weight: 400;
                     display: block;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        .main-top {
+            .main-info {
+                padding-top: 0px;
+            }
+
+            .slider-div {
+                .slider {
+                    div {
+                        img {
+                            height: 500px;
+                        }
+                    }
+                }
+
+                .captions {
+                    height: 120px;
+                    top: 356px;
+
+                    .slide-info {
+                        h2 {
+                            font-size: 18px;
+                            margin-top: 0;
+                        }
+
+                        h3 {
+                            font-size: 14px;
+                        }
+                    }
+
+                    .slider-back span svg, .slider-next span svg {
+                        width: 60px;
+                    }
                 }
             }
         }

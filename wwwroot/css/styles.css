@@ -104,6 +104,9 @@ body header .top-center .top-bar .uk-search .uk-search-input {
   border: none;
   color: #3C3835;
 }
+body header .top-center .top-bar .uk-search .uk-search-input::placeholder {
+  color: #3C3835;
+}
 body header .top-center .top-bar .languages {
   padding: 0 45px;
 }
@@ -123,16 +126,39 @@ body header .hamburger-menu {
   display: none;
 }
 body .main-top .bx-controls-direction {
-  /*display: none;*/
+  display: none;
 }
-body .main-top .slider div img {
+body .main-top .bx-wrapper {
+  border: none;
+  box-shadow: none;
+}
+body .main-top .bx-wrapper .bx-pager,
+body .main-top .bx-wrapper .bx-controls-auto {
+  bottom: 156px;
+}
+body .main-top .bx-wrapper .bx-pager.bx-default-pager a {
+  background-color: #fff;
+  width: 30px;
+  height: 10px;
+  border-radius: 0;
+}
+body .main-top .bx-wrapper .bx-pager.bx-default-pager a:hover,
+body .main-top .bx-wrapper .bx-pager.bx-default-pager a.active,
+body .main-top .bx-wrapper .bx-pager.bx-default-pager a:focus {
+  background-color: #A38B5B;
+}
+body .main-top .slider-div {
+  margin: -143px 0 143px 0;
+}
+body .main-top .slider-div .slider div img {
   width: 100%;
   display: block;
   height: 770px;
   object-fit: cover;
 }
-body .main-top .slider div .captions {
-  width: 940px;
+body .main-top .slider-div .captions {
+  width: 100%;
+  max-width: 940px;
   height: 250px;
   position: absolute;
   top: 630px;
@@ -146,21 +172,30 @@ body .main-top .slider div .captions {
   border-width: 10px 1px 1px 1px;
   border-style: solid;
   display: flex;
+  justify-content: space-between;
 }
-body .main-top .slider div .captions h3 {
+body .main-top .slider-div .captions .slide-info {
+  width: 100%;
+  max-width: 730px;
+}
+body .main-top .slider-div .captions .slide-info h3 {
   font-size: 18px;
   font-weight: 700;
   color: #82807E;
 }
-body .main-top .slider div .captions h2 {
+body .main-top .slider-div .captions .slide-info h2 {
   font-size: 48px;
   font-weight: 700;
   color: #4D4A47;
 }
-body .main-top .slider div .captions .slider-back span svg,
-body .main-top .slider div .captions .slider-next span svg {
-  width: 110px;
+body .main-top .slider-div .captions .slider-back span svg,
+body .main-top .slider-div .captions .slider-next span svg {
+  width: 84px;
   color: #4D4A47;
+}
+body .main-top .slider-div .captions .slider-back span svg:hover,
+body .main-top .slider-div .captions .slider-next span svg:hover {
+  cursor: pointer;
 }
 body .main-info {
   width: 100%;
@@ -469,6 +504,13 @@ body footer .foot-bottom .foot-bottom-div {
   body .main-aktualnosti {
     padding: 0 20px;
   }
+  body .main-top .slider-div .captions {
+    width: 60%;
+    height: 200px;
+  }
+  body .main-top .slider-div .captions .slide-info h2 {
+    font-size: 32px;
+  }
   body footer .footer-div .foot-top {
     padding: 0 20px;
   }
@@ -629,6 +671,20 @@ body footer .foot-bottom .foot-bottom-div {
     height: 80px;
     width: 100%;
   }
+  body .main-top .bx-wrapper .bx-pager,
+  body .main-top body .main-top .bx-wrapper .bx-controls-auto {
+    bottom: 90px;
+  }
+  body .main-top .slider-div .captions {
+    height: 150px;
+  }
+  body .main-top .slider-div .captions .slide-info h2 {
+    font-size: 24px;
+    margin-top: 0;
+  }
+  body .main-top .slider-div .captions .slide-info h3 {
+    font-size: 16px;
+  }
   body .main-top .main-icons-div h2 {
     font-size: 22px;
   }
@@ -664,5 +720,28 @@ body footer .foot-bottom .foot-bottom-div {
     font-size: 14px;
     font-weight: 400;
     display: block;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body .main-top .main-info {
+    padding-top: 0px;
+  }
+  body .main-top .slider-div .slider div img {
+    height: 500px;
+  }
+  body .main-top .slider-div .captions {
+    height: 120px;
+    top: 356px;
+  }
+  body .main-top .slider-div .captions .slide-info h2 {
+    font-size: 18px;
+    margin-top: 0;
+  }
+  body .main-top .slider-div .captions .slide-info h3 {
+    font-size: 14px;
+  }
+  body .main-top .slider-div .captions .slider-back span svg,
+  body .main-top .slider-div .captions .slider-next span svg {
+    width: 60px;
   }
 }
