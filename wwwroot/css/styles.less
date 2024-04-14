@@ -71,6 +71,10 @@
     }
 }
 
+.mobile-show {
+    display: none;
+}
+
 body {
     font-size: 16px;
     font-weight: 600;
@@ -410,7 +414,7 @@ body {
                 font-weight: 400;
 
                 .contact-card {
-                    padding: 36px;
+                    padding: 36px 0;
 
                     p {
                         line-height: 28px;
@@ -593,14 +597,65 @@ body {
 }
 
 @media only screen and (max-width: 1500px) {
-    .main-top, .main-aktualnosti {
-        padding: 0 20px;
+    body {
+
+        .main-top, .main-aktualnosti {
+            padding: 0 20px;
+        }
+
+        footer .footer-div {
+
+            .foot-top {
+                padding: 0 20px;
+            }
+
+            .foot-mid {
+                padding: 10px 20px;
+
+                .copyright {
+                    bottom: -45px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    body {
+
+        .povijest {
+            padding: 0 20px;
+
+            .pov-top h1 {
+                font-size: 30px;
+            }
+
+            .pov-contacts-div .pov-contacts {
+                font-size: 14px;
+
+                * + .uk-grid-margin, .uk-grid + .uk-grid, .uk-grid > .uk-grid-margin {
+                    margin-top: 0;
+                }
+
+                .contact-card {
+                    padding: 20px 20px 0 20px;
+                }
+            }
+
+            .pov-aside {
+                font-size: 14px;
+            }
+        }
     }
 }
 
 @media only screen and (max-width: 1000px) {
 
     body {
+
+        .mobile-show {
+            display: block;
+        }
 
         .mobile-hide {
             display: none;
@@ -782,31 +837,36 @@ body {
             }
         }
 
-        .povijest {
+        footer {
+            margin-top: 0;
 
-            .pov-top h1 {
-                font-size: 30px;
+            .footer-div {
+
+                .foot-mid {
+
+                    .foot-newsletter {
+
+                        .input-newsletter {
+                            display: block;
+
+                            div {
+                                margin-left: 0;
+                            }
+                        }
+                    }
+                }
             }
 
-            .pov-contacts-div .pov-contacts {
+            .foot-bottom {
+                height: 65px;
+                padding: 10px 20px;
+                text-align: center;
 
-                * + .uk-grid-margin, .uk-grid + .uk-grid, .uk-grid > .uk-grid-margin {
-                    margin-top: 0;
-                }
-
-                .contact-card {
-                    padding: 20px 20px 0 20px;
-                }
-            }
-        }
-
-        footer .footer-div .foot-mid .foot-newsletter {
-
-            .input-newsletter {
-                display: block;
-
-                div {
-                    margin-left: 0;
+                .copyright {
+                    color: @white;
+                    font-size: 14px;
+                    font-weight: 400;
+                    display: block;
                 }
             }
         }

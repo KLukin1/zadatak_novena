@@ -45,6 +45,9 @@
 .languages span:last-child {
   color: #82807E;
 }
+.mobile-show {
+  display: none;
+}
 body {
   font-size: 16px;
   font-weight: 600;
@@ -324,7 +327,7 @@ body .povijest .pov-contacts-div .pov-contacts {
   font-weight: 400;
 }
 body .povijest .pov-contacts-div .pov-contacts .contact-card {
-  padding: 36px;
+  padding: 36px 0;
 }
 body .povijest .pov-contacts-div .pov-contacts .contact-card p {
   line-height: 28px;
@@ -462,12 +465,46 @@ body footer .foot-bottom .foot-bottom-div {
   margin: 0 auto;
 }
 @media only screen and (max-width: 1500px) {
-  .main-top,
-  .main-aktualnosti {
+  body .main-top,
+  body .main-aktualnosti {
     padding: 0 20px;
+  }
+  body footer .footer-div .foot-top {
+    padding: 0 20px;
+  }
+  body footer .footer-div .foot-mid {
+    padding: 10px 20px;
+  }
+  body footer .footer-div .foot-mid .copyright {
+    bottom: -45px;
+  }
+}
+@media only screen and (max-width: 1250px) {
+  body .povijest {
+    padding: 0 20px;
+  }
+  body .povijest .pov-top h1 {
+    font-size: 30px;
+  }
+  body .povijest .pov-contacts-div .pov-contacts {
+    font-size: 14px;
+  }
+  body .povijest .pov-contacts-div .pov-contacts * + .uk-grid-margin,
+  body .povijest .pov-contacts-div .pov-contacts .uk-grid + .uk-grid,
+  body .povijest .pov-contacts-div .pov-contacts .uk-grid > .uk-grid-margin {
+    margin-top: 0;
+  }
+  body .povijest .pov-contacts-div .pov-contacts .contact-card {
+    padding: 20px 20px 0 20px;
+  }
+  body .povijest .pov-aside {
+    font-size: 14px;
   }
 }
 @media only screen and (max-width: 1000px) {
+  body .mobile-show {
+    display: block;
+  }
   body .mobile-hide {
     display: none;
   }
@@ -608,21 +645,24 @@ body footer .foot-bottom .foot-bottom-div {
   body .main-aktualnosti .aktualnosti .aktualnosti-top a {
     font-size: 18px;
   }
-  body .povijest .pov-top h1 {
-    font-size: 30px;
-  }
-  body .povijest .pov-contacts-div .pov-contacts * + .uk-grid-margin,
-  body .povijest .pov-contacts-div .pov-contacts .uk-grid + .uk-grid,
-  body .povijest .pov-contacts-div .pov-contacts .uk-grid > .uk-grid-margin {
+  body footer {
     margin-top: 0;
-  }
-  body .povijest .pov-contacts-div .pov-contacts .contact-card {
-    padding: 20px 20px 0 20px;
   }
   body footer .footer-div .foot-mid .foot-newsletter .input-newsletter {
     display: block;
   }
   body footer .footer-div .foot-mid .foot-newsletter .input-newsletter div {
     margin-left: 0;
+  }
+  body footer .foot-bottom {
+    height: 65px;
+    padding: 10px 20px;
+    text-align: center;
+  }
+  body footer .foot-bottom .copyright {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    display: block;
   }
 }
