@@ -6,6 +6,9 @@
 @font-medium: #82807E;
 @dark-indigo: #425863;
 @content-width: 1420px;
+@divider-color: #E8E0CC;
+@dark: #4D4A47;
+//
 
 .uk-button-default {
     background-color: @gold;
@@ -31,6 +34,10 @@
 .uk-navbar-nav {
     width: 100%;
     justify-content: space-around;
+}
+
+.uk-checkbox:checked {
+    background-color: @gold;
 }
 
 .knezeva-palaca {
@@ -101,7 +108,7 @@ body {
             width: 206px;
             height: 79px;
             position: relative;
-            border-right: 1px solid #E8E0CC;
+            border-right: 1px solid @divider-color;
 
             img {
                 position: absolute;
@@ -153,7 +160,7 @@ body {
                 }
 
                 .top-icons {
-                    border-left: 1px solid #E8E0CC;
+                    border-left: 1px solid @divider-color;
                     padding: 0 47px;
                 }
             }
@@ -249,13 +256,13 @@ body {
                     h2 {
                         font-size: 48px;
                         font-weight: 700;
-                        color: #4D4A47;
+                        color: @dark;
                     }
                 }
 
                 .slider-back span svg, .slider-next span svg {
                     width: 84px;
-                    color: #4D4A47;
+                    color: @dark;
 
                     &:hover {
                         cursor: pointer;
@@ -386,7 +393,7 @@ body {
                     h3 {
                         font-size: 20px;
                         font-weight: 700;
-                        color: #4D4A47;
+                        color: @dark;
                         margin-top: 5px;
                         height: 65px;
                     }
@@ -421,7 +428,7 @@ body {
     .povijest {
 
         hr {
-            border-color: #E8E0CC;
+            border-color: @divider-color;
         }
 
         .pov-top, .pov-contacts, .pov-main {
@@ -437,20 +444,20 @@ body {
                 a {
                     font-size: 14px;
                     font-weight: 600;
-                    color: #4D4A47;
+                    color: @dark;
                 }
 
                 span {
                     font-size: 14px;
                     font-weight: 700;
-                    color: #4D4A47;
+                    color: @dark;
                 }
             }
 
             h1 {
                 font-size: 48px;
                 font-weight: 700;
-                color: #4D4A47;
+                color: @dark;
             }
         }
 

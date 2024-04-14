@@ -18,6 +18,9 @@
   width: 100%;
   justify-content: space-around;
 }
+.uk-checkbox:checked {
+  background-color: #A38B5B;
+}
 .knezeva-palaca {
   width: 199px;
   height: 43px;
