@@ -39,10 +39,10 @@
   line-height: 43px;
   vertical-align: middle;
 }
-.languages span:first-child {
+.languages a:first-child {
   color: #A38B5B;
 }
-.languages span:last-child {
+.languages a:last-child {
   color: #82807E;
 }
 .mobile-show {
@@ -110,6 +110,12 @@ body header .top-center .top-bar .uk-search .uk-search-input::placeholder {
 body header .top-center .top-bar .languages {
   padding: 0 45px;
 }
+body header .top-center .top-bar .languages a {
+  padding-left: 10px;
+}
+body header .top-center .top-bar .languages a:hover {
+  text-decoration: none;
+}
 body header .top-center .top-bar .top-icons {
   border-left: 1px solid #E8E0CC;
   padding: 0 47px;
@@ -159,7 +165,7 @@ body .main-top .slider-div .slider div img {
 body .main-top .slider-div .captions {
   width: 100%;
   max-width: 940px;
-  height: 250px;
+  height: 230px;
   position: absolute;
   top: 630px;
   margin-left: auto;
@@ -167,12 +173,13 @@ body .main-top .slider-div .captions {
   left: 0;
   right: 0;
   background-color: #fff;
-  padding: 20px;
+  padding: 20px 0;
   border-color: #A38B5B;
   border-width: 10px 1px 1px 1px;
   border-style: solid;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 body .main-top .slider-div .captions .slide-info {
   width: 100%;
@@ -210,7 +217,7 @@ body .main-info h2 {
 }
 body .main-info .main-icons-div {
   background-color: #F6F4F0;
-  padding: 6px 23px 12px 23px;
+  padding: 12px 23px;
 }
 body .main-info .main-icons-div .main-icons {
   display: flex;
@@ -652,6 +659,10 @@ body footer .foot-bottom .foot-bottom-div {
   }
   body header .hamburger-menu .menu__item ul {
     list-style-type: none;
+    margin-bottom: 0;
+  }
+  body header .hamburger-menu .menu__item ul li {
+    padding-bottom: 8px;
   }
   body header .hamburger-menu .menu__item ul a {
     color: #3C3835;

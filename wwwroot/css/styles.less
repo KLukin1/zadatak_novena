@@ -59,7 +59,7 @@
     }
 }
 
-.languages span {
+.languages a {
 
     &:first-child {
         color: @gold;
@@ -142,6 +142,14 @@ body {
 
                 .languages {
                     padding: 0 45px;
+
+                    a {
+                        padding-left: 10px;
+
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
                 }
 
                 .top-icons {
@@ -212,7 +220,7 @@ body {
             .captions {
                 width: 100%;
                 max-width: 940px;
-                height: 250px;
+                height: 230px;
                 position: absolute;
                 top: 630px;
                 margin-left: auto;
@@ -220,12 +228,13 @@ body {
                 left: 0;
                 right: 0;
                 background-color: @white;
-                padding: 20px;
+                padding: 20px 0;
                 border-color: @gold;
                 border-width: 10px 1px 1px 1px;
                 border-style: solid;
                 display: flex;
                 justify-content: space-between;
+                align-items: center;
 
                 .slide-info {
                     width: 100%;
@@ -270,7 +279,7 @@ body {
 
         .main-icons-div {
             background-color: @light-background;
-            padding: 6px 23px 12px 23px;
+            padding: 12px 23px;
 
             .main-icons {
                 display: flex;
@@ -832,6 +841,11 @@ body {
 
                     ul {
                         list-style-type: none;
+                        margin-bottom: 0;
+
+                        li {
+                            padding-bottom: 8px;
+                        }
 
                         a {
                             color: @font-dark;
