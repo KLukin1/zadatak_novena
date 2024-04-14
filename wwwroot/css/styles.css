@@ -21,6 +21,9 @@
 .uk-checkbox:checked {
   background-color: #A38B5B;
 }
+.uk-checkbox:checked:focus {
+  background-color: #A38B5B;
+}
 .knezeva-palaca {
   width: 199px;
   height: 43px;
